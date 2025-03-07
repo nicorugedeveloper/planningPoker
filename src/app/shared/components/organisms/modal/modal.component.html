@@ -1,0 +1,7 @@
+<div class="modal-overlay" *ngIf="isVisible">
+  <div class="modal-content">
+    <button class="close-button" (click)="onClose()">×</button>
+    <ng-content></ng-content> <!-- Aquí se proyecta el formulario -->
+  </div>
+</div>
+<div class="modal-backdrop" *ngIf="isVisible"></div>

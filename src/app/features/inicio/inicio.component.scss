@@ -1,0 +1,36 @@
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+/* Fondo oscuro translúcido para el modal */
+.modal-content {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* Contenedor padre del modal */
+.modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Centrar verticalmente */
+}
+
+/* Fondo morado con efecto de brillo */
+.modal-body {
+  background: rgba(20, 10, 40, 0.95);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px rgba(138, 43, 226, 0.7); /* Brillo morado */
+  text-align: center;
+  width: 420px; /* Ajusta el tamaño si es necesario */
+}

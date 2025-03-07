@@ -1,0 +1,18 @@
+
+button {
+  background-color: #9D9DA14D; /* Color base del botón */
+  color: rgba(255, 255, 255, 0.5); /* Texto tenue */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: not-allowed;
+  transition: all 0.3s ease;
+}
+
+button:enabled {
+  background-color: white;
+  color: #4A3B5A; /* Color del texto cuando está activo */
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+}

@@ -1,0 +1,14 @@
+<form (ngSubmit)="onSubmit()" class="form-container">
+  <h1>Tu nombre</h1>
+  <app-input placeholder="Nombre" (valueChange)="playerRequest.name = $event"></app-input>
+  <div class="mode-selection">
+    <label>Jugador
+      <input type="radio" name="playerMode" [(ngModel)]="playerRequest.playerMode" value="player">
+    </label>
+    <label>
+      Espectador
+      <input type="radio" name="playerMode" [(ngModel)]="playerRequest.playerMode" value="spectator">
+    </label>
+  </div>
+  <app-button label="Continuar" [disabled]="!playerRequest.name"></app-button>
+</form>

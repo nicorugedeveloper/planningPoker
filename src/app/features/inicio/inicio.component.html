@@ -1,0 +1,25 @@
+<button
+  class="btn btn-primary"
+  data-bs-toggle="modal"
+  data-bs-target="#gameStartModal"
+>
+  Crear partida
+</button>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="gameStartModal"
+  tabindex="-1"
+  aria-labelledby="gameStartModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <!-- Tu formulario como componente -->
+        <app-form (submitForm)="onFormSubmit($event)"></app-form>
+      </div>
+    </div>
+  </div>
+</div>
