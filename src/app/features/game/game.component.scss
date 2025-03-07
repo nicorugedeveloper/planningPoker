@@ -1,0 +1,154 @@
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.player-card {
+  animation: fadeInUp 0.3s ease-out forwards;
+}
+
+/* Estilos base */
+:host {
+  display: block;
+  height: 100vh;
+  background: #1b0032;
+  color: white;
+  text-align: center;
+}
+
+.game-table-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #1a0933;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 100%;
+
+  .logo {
+    width: 40px;
+    height: 40px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .table-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .header-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.invite-btn {
+  background: #8a2be2;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+}
+
+.table-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.table-image {
+  position: absolute;
+  max-width: 100%;
+}
+
+.player-avatar {
+  width: 50px;
+  height: 50px;
+  background: #8a2be2;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  &.small {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+}
+
+.player-placeholder {
+  width: 30px;
+  height: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.player-name {
+  margin-top: 5px;
+  font-weight: 500;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.table-player {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+
+  .empty-slot {
+    width: 30px;
+    height: 60px;
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+  }
+}
+
+.main-player {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 20;
+}

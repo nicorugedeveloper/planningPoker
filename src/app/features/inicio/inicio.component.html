@@ -1,10 +1,20 @@
-<button
+<!-- <button
   class="btn btn-primary"
   data-bs-toggle="modal"
   data-bs-target="#gameStartModal"
 >
   Crear partida
-</button>
+</button> -->
+
+<div class="container" >
+  <form class="game-form">
+      <label for="game-name">Nombra la partida</label>
+      <app-input placeholder="sprint32" />
+      <button data-bs-toggle="modal"
+      data-bs-target="#gameStartModal" type="submit">Crear partida</button>
+  </form>
+</div>
+
 
 <!-- Modal -->
 <div

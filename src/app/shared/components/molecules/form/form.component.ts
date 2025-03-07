@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { PlayerRequest } from '../../../../core/models/player-request';
 import { ButtonComponent } from '../../atoms/button/button.component';
 import { InputComponent } from '../../atoms/input/input.component';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -16,8 +16,13 @@ export class FormComponent {
   playerRequest: PlayerRequest = { name: '', playerMode: 'player' }; // Modelo del formulario
   @Output() submitForm = new EventEmitter<PlayerRequest>(); // Emite el evento al enviar el formulario
 
+  constructor(private router: Router) {}
+
   // Método para manejar el envío del formulario
   onSubmit() {
     this.submitForm.emit(this.playerRequest);
-  }
+    this.router.navigate(['/game']);
 }
+  }
+
+
