@@ -1,0 +1,10 @@
+$primary-color: #BB65FF;
+$hover-color: #E4A4FF;
+
+.number-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 20px;
+}

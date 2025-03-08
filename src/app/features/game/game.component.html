@@ -5,7 +5,7 @@
   </div>
   <h1>Sprint 32</h1>
   <button class="invite-btn">Invitar jugadores</button>
-</nav>
+</nav>x
  -->
  <div class="game-table-container">
 
@@ -30,9 +30,9 @@
 
   <!-- MESA CENTRAL -->
   <div class="table-container">
-    <img class="table-image img1" src="/images/Rectangle1.png" alt="Imagen 1" width="500" />
-    <img class="table-image img2" src="/images/Rectangle2.png" alt="Imagen 2" width="600" />
-    <img class="table-image img3" src="/images/Rectangle3.png" alt="Imagen 3" width="400" />
+    <img class="table-image img1" src="/images/Rectangle1.png" alt="Imagen 1" width="555" height="298" />
+    <img class="table-image img2" src="/images/Rectangle2.png" alt="Imagen 2" width="603" height="345"/>
+    <img class="table-image img3" src="/images/Rectangle3.png" alt="Imagen 3" width="510" height="250" />
 
     <!-- Jugadores alrededor de la mesa -->
     <div *ngFor="let slot of playerSlots; let i = index"
@@ -54,5 +54,8 @@
     <p class="player-name">{{ mainPlayer.name }}</p>
   </div>
 </div>
+
+    <app-cards-container/>
+
 <!--
 <app-elegir-carta/> -->

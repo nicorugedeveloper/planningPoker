@@ -1,0 +1,28 @@
+$card-size: 53px;
+$card-height: 86px;
+$border-radius: 8px;
+$primary-color: #BB65FF;
+$hover-color: #E4A4FF;
+$font-color-hover: #330072;
+.number-card {
+  background-color: $font-color-hover;
+  border: 2px solid $primary-color;
+  border-radius: $border-radius;
+  width: $card-size;
+  height: $card-height;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 20px  #BB65FF;
+  &:hover {
+    color: $font-color-hover;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: $hover-color;
+  }
+}
