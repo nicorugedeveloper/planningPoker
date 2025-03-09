@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { CardsContainerComponent } from '../shared/components/molecules/cards-container/cards-container.component';
+import { PlayerAvatarComponent } from '../shared/components/atoms/player-avatar/player-avatar.component';
+import { TableHeaderComponent } from '../shared/components/organisms/table-header/table-header.component';
+
 
 @Component({
   selector: 'app-purebas',
-  imports: [CardsContainerComponent],
+  imports: [TableHeaderComponent],
   templateUrl: './purebas.component.html',
   styleUrl: './purebas.component.scss'
 })

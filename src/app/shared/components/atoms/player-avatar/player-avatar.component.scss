@@ -1,0 +1,14 @@
+$avatar-size: 40px;
+
+.player-avatar {
+  width: $avatar-size;
+  height: $avatar-size;
+  border-radius: 50%;
+  background-color: #BB65FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+}

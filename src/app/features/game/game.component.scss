@@ -1,3 +1,5 @@
+$primary-color: #BB65FF;
+
 /* Animaciones */
 @keyframes fadeInUp {
   from {
@@ -91,7 +93,7 @@
 .table-image {
   position: absolute;
   max-width: 100%;
-  
+
 }
 
 .player-avatar {
@@ -139,7 +141,7 @@
   .empty-slot {
     width: 30px;
     height: 60px;
-    border: 1px dashed rgba(255, 255, 255, 0.3);
+    border: 1px solid $primary-color;
     border-radius: 10px;
   }
 }

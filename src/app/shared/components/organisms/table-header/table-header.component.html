@@ -1,0 +1,14 @@
+<header class="table-header">
+  <figure class="table-header__logo">
+    <img src="/images/logo.png" alt="Logo de la aplicación">
+  </figure>
+  <h1 class="table-header__title">Spring 32</h1>
+
+  <div class="table-header__controls">
+    <app-player-avatar [initials]="playerInitials"></app-player-avatar>
+    <app-invite-button
+      [disabled]="isInviting"
+      (invite)="invitePlayers()">
+    </app-invite-button>
+  </div>
+</header>

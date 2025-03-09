@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { CardsContainerComponent } from '../../shared/components/molecules/cards-container/cards-container.component';
+import { TableHeaderComponent } from '../../shared/components/organisms/table-header/table-header.component';
 
 
 
@@ -14,7 +15,7 @@ interface PlayerPosition {
 }
 @Component({
   selector: 'app-game',
-  imports: [CommonModule, CardsContainerComponent],
+  imports: [CommonModule, CardsContainerComponent,TableHeaderComponent],
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss'
 })

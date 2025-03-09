@@ -1,0 +1,32 @@
+.table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  color: #FFFF;
+  background-color:#330072;
+  border-bottom: 2px solid #ddd;
+
+  &__logo img {
+    width: 50px;
+  }
+  &__logo{
+    padding-left: 50px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+  }
+
+  /* app-player-avatar {
+    background-color: #E4A4FF;
+  } */
+
+}
