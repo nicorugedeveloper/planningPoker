@@ -10,7 +10,7 @@ import { InviteButtonComponent } from '../../molecules/invite-button/invite-butt
 })
 export class TableHeaderComponent {
 
-  @Input() playerInitials!: string;
+  @Input() playerInitials: string = 'LU';
   @Input() isInviting = false;
 
 

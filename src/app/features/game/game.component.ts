@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { CardsContainerComponent } from '../../shared/components/molecules/cards-container/cards-container.component';
 import { TableHeaderComponent } from '../../shared/components/organisms/table-header/table-header.component';
+import { PlayerAvatarComponent } from "../../shared/components/atoms/player-avatar/player-avatar.component";
 
 
 
@@ -15,7 +16,7 @@ interface PlayerPosition {
 }
 @Component({
   selector: 'app-game',
-  imports: [CommonModule, CardsContainerComponent,TableHeaderComponent],
+  imports: [CommonModule, CardsContainerComponent, TableHeaderComponent, PlayerAvatarComponent],
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss'
 })
@@ -34,14 +35,15 @@ openModal() {
 
   isInviting = false;
 
+
   playerSlots: PlayerPosition[] = [
-    { name: null, position: { top: '18%', left: '25%' }, slot: 0 },
-    { name: null, position: { top: '18%', left: '50%' }, slot: 1 },
-    { name: null, position: { top: '18%', left: '75%' }, slot: 2 },
+    { name: null, position: { top: '11%', left: '25%' }, slot: 0 },
+    { name: null, position: { top: '11%', left: '50%' }, slot: 1 },
+    { name: null, position: { top: '11%', left: '75%' }, slot: 2 },
     { name: null, position: { top: '50%', left: '13%' }, slot: 3 },
     { name: null, position: { top: '50%', left: '87%' }, slot: 4 },
-    { name: null, position: { top: '85%', left: '25%' }, slot: 5 },
-    { name: null, position: { top: '85%', left: '75%' }, slot: 6 }
+    { name: null, position: { top: '88%', left: '25%' }, slot: 5 },
+    { name: null, position: { top: '88%', left: '75%' }, slot: 6 }
   ];
 
   private playersToInvite = [

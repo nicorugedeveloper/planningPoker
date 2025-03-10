@@ -1,29 +1,55 @@
-<div class="game-table-container">
+<main class="game-table-container">
+  <header class="table-header">
+    <app-table-header></app-table-header>
+    <div class="table-header">
+      <div class="logo">
+        <img src="/images/logo.png" alt="Logo" />
+      </div>
+      <h1 class="table-title">Sprint 32</h1>
 
-  <app-table-header />
+
+      <div class="header-controls">
+        <div class="player-avatar small">
+          {{ mainPlayer.initials }}
+        </div>
+        <button class="invite-btn"
+                (click)="invitePlayers()"
+                [disabled]="isInviting">
+          {{ isInviting ? 'Inviting...' : 'Invitar jugadores' }}
+        </button>
+      </div>
+    </div>
+  </header>
+
 
   <!-- MESA CENTRAL -->
-  <div class="table-container">
-    <img class="table-image img1" src="/images/Rectangle1.png" alt="Imagen 1" width="555" height="298" />
-    <img class="table-image img2" src="/images/Rectangle2.png" alt="Imagen 2" width="603" height="345" />
-    <img class="table-image img3" src="/images/Rectangle3.png" alt="Imagen 3" width="510" height="250" />
+  <section class="table-container">
+    <img class="table-image img1" src="/images/Rectangle1.png" alt="Mesa de juego fondo" width="555" height="298" />
+    <img class="table-image img2" src="/images/Rectangle2.png" alt="Mesa de juego medio" width="603" height="345" />
+    <img class="table-image img3" src="/images/Rectangle3.png" alt="Mesa de juego superior" width="510" height="250" />
 
     <!-- Jugadores alrededor de la mesa -->
-    <div *ngFor="let slot of playerSlots; let i = index" class="table-player" [class.empty]="!slot.name"
+    <article *ngFor="let slot of playerSlots; let i = index" class="table-player" [class.empty]="!slot.name"
       [style.top]="slot.position.top" [style.left]="slot.position.left">
+
       <div *ngIf="slot.name" class="player-card">
-        <div class="player-placeholder"></div>
-        <p class="player-name">{{ slot.name }}</p>
+        <figure class="player-placeholder"></figure>
+        <figcaption class="player-name">{{ slot.name }}</figcaption>
       </div>
-      <div *ngIf="!slot.name" class="empty-slot"></div>
-    </div>
-  </div>
 
-  <!-- JUGADOR PRINCIPAL -->
-  <div class="main-player">
-    <div class="player-avatar">{{ mainPlayer.initials }}</div>
-    <p class="player-name">{{ mainPlayer.name }}</p>
-  </div>
-</div>
+      <div *ngIf="!slot.name" class="empty-slot" aria-label="Posición vacía"></div>
+    </article>
 
-<app-cards-container />
+  </section>
+
+  <!-- JUGADOR PRINCIPAL USANDO COMPONENTE -->
+  <section class="main-player">
+    <app-player-avatar [initials]="mainPlayer.initials"></app-player-avatar>
+    <figcaption class="player-name">{{ mainPlayer.name }}</figcaption>
+  </section>
+
+
+  <footer>
+    <app-cards-container></app-cards-container>
+  </footer>
+</main>

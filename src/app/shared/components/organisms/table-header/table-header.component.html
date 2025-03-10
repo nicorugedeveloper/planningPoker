@@ -6,9 +6,6 @@
 
   <div class="table-header__controls">
     <app-player-avatar [initials]="playerInitials"></app-player-avatar>
-    <app-invite-button
-      [disabled]="isInviting"
-      (invite)="invitePlayers()">
-    </app-invite-button>
+    <app-invite-button [disabled]="isInviting" (invite)="invitePlayers()"></app-invite-button>
   </div>
 </header>
