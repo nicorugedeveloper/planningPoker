@@ -1,27 +1,12 @@
 <main class="game-table-container">
   <header class="table-header">
-    <app-table-header></app-table-header>
-    <div class="table-header">
-      <div class="logo">
-        <img src="/images/logo.png" alt="Logo" />
-      </div>
-      <h1 class="table-title">Sprint 32</h1>
-
-
-      <div class="header-controls">
-        <div class="player-avatar small">
-          {{ mainPlayer.initials }}
-        </div>
-        <button class="invite-btn"
-                (click)="invitePlayers()"
-                [disabled]="isInviting">
-          {{ isInviting ? 'Inviting...' : 'Invitar jugadores' }}
-        </button>
-      </div>
-    </div>
+    <app-table-header
+  [playerInitials]="mainPlayer.initials"
+  [isInviting]="isInviting"
+  (invitePlayersEvent)="invitePlayers()">
+</app-table-header>
   </header>
-
-
+  
   <!-- MESA CENTRAL -->
   <section class="table-container">
     <img class="table-image img1" src="/images/Rectangle1.png" alt="Mesa de juego fondo" width="555" height="298" />

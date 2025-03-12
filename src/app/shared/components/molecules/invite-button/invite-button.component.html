@@ -1,3 +1,3 @@
-<button class="invite-button" (click)="onClick()" [disabled]="disabled">
-  {{ disabled ? 'Inviting...' : 'Invitar jugadores' }}
+<button class="invite-button" (click)="invitePlayers()" [disabled]="isInviting">
+  {{ isInviting ? 'Inviting...' : 'Invitar jugadores' }}
 </button>

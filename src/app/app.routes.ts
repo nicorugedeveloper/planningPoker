@@ -13,5 +13,6 @@ export const routes: Routes = [
   },
   {
     path:'pruebas', component:PurebasComponent
-  }
+  },
+  { path: '**', redirectTo: 'inicio' }
 ];

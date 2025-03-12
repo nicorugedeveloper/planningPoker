@@ -21,29 +21,21 @@ interface PlayerPosition {
   styleUrl: './game.component.scss'
 })
 export class GameComponent {
-
   mainPlayer = {
     name: 'Luisa',
     initials: 'LU'
   };
   isModalOpen = false;
-
-openModal() {
-  this.isModalOpen = true;
-}
-
-
   isInviting = false;
 
-
   playerSlots: PlayerPosition[] = [
-    { name: null, position: { top: '11%', left: '25%' }, slot: 0 },
-    { name: null, position: { top: '11%', left: '50%' }, slot: 1 },
-    { name: null, position: { top: '11%', left: '75%' }, slot: 2 },
+    { name: null, position: { top: '4%', left: '25%' }, slot: 0 },
+    { name: null, position: { top: '4%', left: '50%' }, slot: 1 },
+    { name: null, position: { top: '4%', left: '75%' }, slot: 2 },
     { name: null, position: { top: '50%', left: '13%' }, slot: 3 },
     { name: null, position: { top: '50%', left: '87%' }, slot: 4 },
-    { name: null, position: { top: '88%', left: '25%' }, slot: 5 },
-    { name: null, position: { top: '88%', left: '75%' }, slot: 6 }
+    { name: null, position: { top: '92%', left: '25%' }, slot: 5 },
+    { name: null, position: { top: '92%', left: '75%' }, slot: 6 }
   ];
 
   private playersToInvite = [

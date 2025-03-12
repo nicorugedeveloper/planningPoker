@@ -18,7 +18,7 @@ $font-color-hover: #330072;
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 0 20px  #BB65FF;
+  box-shadow: 0 0 7px  #BB65FF;
   &:hover {
     color: $font-color-hover;
     transform: translateY(-5px);

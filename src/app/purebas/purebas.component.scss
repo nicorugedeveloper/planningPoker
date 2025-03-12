@@ -1,0 +1,34 @@
+.modal-content {
+  background: #1B1231 !important;
+  border: 2px solid #9610FF !important;
+  border-radius: 25px !important; /* Aumenta este valor para más redondez */
+}
+
+.modal-header-custom {
+  background: #6429CD !important;
+  border-top-left-radius: 22px !important; /* Ajusta para que coincida con el modal */
+  border-top-right-radius: 22px !important; /* Ajusta para que coincida con el modal */
+  padding: 1rem 1.5rem;
+}
+
+.btn-light {
+  background: #FFFFFF !important;
+  color: #1B1231 !important;
+  border-radius: 50px !important;
+  border: none;
+  font-weight: 600 !important;
+}
+
+.btn-light:hover {
+  background: #E8E8E8 !important;
+}
+
+.input-custom {
+  background: #2A1E4B !important;
+  border: 1px solid #9610FF !important;
+  color: white !important;
+}
+
+.input-custom:focus {
+  box-shadow: 0 0 0 3px rgba(150, 16, 255, 0.25) !important;
+}

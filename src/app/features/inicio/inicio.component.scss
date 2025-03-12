@@ -1,4 +1,14 @@
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: lightgray;
+}
+
+
 .home-container {
   display: flex;
   flex-direction: column;
@@ -10,32 +20,28 @@
 h1 {
   margin-bottom: 20px;
 }
-/* Fondo oscuro translúcido para el modal */
+
 .modal-content {
   background: transparent;
   border: none;
   box-shadow: none;
 }
 
-/* Contenedor padre del modal */
 .modal-dialog {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Centrar verticalmente */
+  min-height: 100vh;
 }
 
-/* Fondo morado con efecto de brillo */
 .modal-body {
   background: rgba(20, 10, 40, 0.95);
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0px 0px 30px rgba(138, 43, 226, 0.7); /* Brillo morado */
+  box-shadow: 0px 0px 30px rgba(138, 43, 226, 0.7);
   text-align: center;
-  width: 420px; /* Ajusta el tamaño si es necesario */
+  width: 420px;
 }
-
-
 
 .container {
   display: flex;
@@ -50,17 +56,23 @@ h1 {
   flex-direction: column;
   align-items: center;
 
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   padding: 20px;
   border-radius: 10px;
 
-  width: 250px; /* Tamaño reducido */
+  width: 400px;
 }
 
-/* Botón */
+.game-form label{
+  text-align: left;
+  color: #FFFF;
+}
+
 .game-form button {
   margin-top: 15px;
-  padding: 10px 20px;
+  padding: 6px 18px;
   background-color: white;
   color: black;
   border: none;
@@ -68,6 +80,9 @@ h1 {
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+.game-name{
+  justify-content: flex-start;
 }
 
 .game-form button:hover {

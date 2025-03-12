@@ -1,1 +1,43 @@
-<app-table-header/>
+<!-- Botón para abrir el modal - Con ícono -->
+<button type="button" class="btn btn-primary d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#invitePlayersModal">
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+    <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+  </svg>
+  Invitar jugadores
+</button>
+
+<!-- <div *ngFor="let player of players">
+  {{ player.name }}
+</div>
+<button (click)="joinGame()">Unirse al Juego</button>
+ -->
+<!-- Modal -->
+<div class="modal fade" id="invitePlayersModal" tabindex="-1" aria-labelledby="invitePlayersModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <!-- Cabecera personalizada -->
+      <div class="modal-header-custom d-flex justify-content-between align-items-center">
+        <h5 class="text-white fw-bold mb-0" style="font-size: 1.25rem;">Invitar jugadores</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4">
+        <div class="input-group">
+          <input id="inviteLink" type="text" class="form-control input-custom py-2 px-3"
+                 value="https://prsgplanningpoker.com/6QdP8bVGUZQUNCqYAF7" readonly
+                 style="border-radius: 8px; font-size: 0.9rem;">
+        </div>
+        <div class="text-center mt-4">
+          <button class="btn btn-light px-5 py-2 d-flex align-items-center gap-2 m-auto"
+                  (click)="copyLink()"
+                  style="border-radius: 50px; transition: all 0.3s;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#1B1231" class="bi bi-link-45deg" viewBox="0 0 16 16">
+              <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
+              <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
+            </svg>
+            Copiar link
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -25,4 +25,6 @@ navigateToAbout() {
     const modal = document.getElementById('gameStartModal');
     if(modal) modal.classList.remove('show');
   }
+
+  
 }
